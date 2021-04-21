@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="https://i.pinimg.com/originals/00/50/71/005071cbf1fdd17673607ecd7b7e88f6.png" type="image/png" sizes="16x16">  
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>AITU</span>
+    </div>
+    <div id="about">
+      <a href="#top" title="Главная" onclick="slowScroll('#top')">Главная</a>
+      <a href="#main" title="Мой опыт" onclick="slowScroll('#main')">Мой опыт</a>
+      <a href="#overview" title="Мои хобби" onclick="slowScroll('#overview')">Мои хобби</a>
+      <a href="#contacts" title="Свяжитесь со мной" onclick="slowScroll('#contacts')">Свяжитесь со мной</a>
+      <a href="#faq" title="Соц.сети" onclick="slowScroll('#faq')">Соц.сети</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Temirgaly Dinmukhamed</h1>
+    <h2>Student of Astana IT University</h2>
+    <h3>CS-2010</h2>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Experiences:</h2>
+
+      <span>I used to be as an active member of volunteer group called "IRONMAN"</span><br>
+    <span class="title">ArtMedia</span><br>
+      <a href="https://www.ironman.com/im703-astana">
+         <img alt="Facebook" src="https://lsmtravel.kz/ironman2019/private-access/ru/images/IRONMAN70.3_Astana_negative.png"
+         width="404,5" height="172,5"></a>
+    </div>
+    <div class="text">
+      <span></span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Мои хобби</h2>
+    <h4>В свободное свое время увлекаюсь спортом и живу музыкой!</h4>
+
+    <div class="img">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Bulgaria-serbia_volley_2012.jpg/300px-Bulgaria-serbia_volley_2012.jpg" alt="">
+      <span></span>
+    </div>
+    <div class="img">
+      <img src="https://lh3.googleusercontent.com/proxy/pXY5Psfr6jxH3P8XHEfPvPBfxPUl5uXqVLfALEESXfKfvn8z6lM45xXenkJdjC5ecY6CJI6ZkeEDuIx_uANhk-bPaXtQizjo3JAkCQGnFPr8NTIVyFtUY6aZYLmEFI5Hhpd0nw" alt="">
+      <span></span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Свяжись со мной!</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Сообщение <span>*</span></label><br>
+			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Instagram</span><br>
+      <a href="https://www.instagram.com/deantsarev/?hl=ru">
+         <img alt="Instagram" src="https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png"
+         width="250" height="250">
+      </a>
+    </div>
+    <div>
+      <span class="title">VK</span><br>
+      <a href="https://vk.com/dimanashkaa">
+         <img alt="VK" src="https://cdn.iconscout.com/icon/free/png-256/vk-2690362-2232865.png"
+         width="250" height="250"></a>
+    </div>
+      <span class="title">Facebook</span><br>
+      <a href="https://www.facebook.com/profile.php?id=100029453103855">
+         <img alt="Facebook" src="https://www.freeiconspng.com/uploads/facebook-f-logo-transparent-image-4.png"
+         width="250" height="250"></a>
+    </div>
+  </div>
+
+  <script src="https://img.grouponcdn.com/iam/4sDLNT4aMfo663mawTnY/ox-2048x1242/v1/c700x420.jpg"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
